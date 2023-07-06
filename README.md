@@ -1,4 +1,4 @@
-<img src="https://w7.pngwing.com/pngs/605/888/png-transparent-resume-curriculum-vitae-template-moto-highway-racing-computer-icons-resume-blue-text-resume-thumbnail.png"/>
+<img src=""/>
 
 # Resume Builder
 A web-based resume builder application that allows users to create professional resumes with ease.
