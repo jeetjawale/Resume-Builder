@@ -17,7 +17,8 @@ Click the button above to see a live demo of the application.
 
 ## Technologies Used
 
-- Front-end: HTML5, CSS3, JavaScript
+- Front-end: HTML5, CSS, JavaScript
+- Content Delivery Networks: jsDelivr, font-awesome
 - Front-end Framework: Bootstrap
 - Authentication: JavaScript Authentication
 - Database: Local Storage
@@ -33,5 +34,6 @@ Click the button above to see a live demo of the application.
  ![Fill Details Page](Screenshots/FillData.png)
  
  ![Resume Ready Page Page](Screenshots/Resume.png)
+
 
  
