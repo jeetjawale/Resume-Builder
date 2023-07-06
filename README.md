@@ -26,4 +26,12 @@ Click the button above to see a live demo of the application.
 
 ## Screenshots
 
-- ![Sign Up Page](Screenshots/SignIn.png)  
+ ![Sign Up Page](Screenshots/SignUp.png)  
+ 
+ ![Sign In Page](Screenshots/SignIn.png)
+ 
+ ![Fill Details Page](Screenshots/FillData.png)
+ 
+ ![Resume Ready Page Page](Screenshots/Resume.png)
+
+ 
