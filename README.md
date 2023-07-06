@@ -4,7 +4,7 @@ A web-based resume builder application that allows users to create professional 
 ## Live Demo
 
 [![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen.svg)](https://jeetjawale.github.io/Resume-Builder)
-
+[![Project License](https://img.shields.io/github/license/JeetJawale/Resume-Builder?style=flat-square)](https://github.com/AmruthPillai/Reactive-Resume/blob/main/LICENSE)
 Click the button above to see a live demo of the application.
 
 ## Features
@@ -35,5 +35,5 @@ Click the button above to see a live demo of the application.
  
  ![Resume Ready Page Page](Screenshots/Resume.png)
 
-
- 
+## License
+- Resume Builder is packaged and distributed using the [MIT License](https://choosealicense.com/licenses/mit/) which allows for commercial use, distribution, modification and private use provided that all copies of the web page contain the same license and copyright.
