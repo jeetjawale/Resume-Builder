@@ -1,11 +1,9 @@
 # Resume-Builder
 A web-based resume builder application that allows users to create professional resumes with ease.
 
-## Live Demo
-
 [![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen.svg)](https://jeetjawale.github.io/Resume-Builder)
-[![Project License](https://img.shields.io/github/license/JeetJawale/Resume-Builder?style=flat-square)](https://github.com/AmruthPillai/Reactive-Resume/blob/main/LICENSE)
-Click the button above to see a live demo of the application.
+[![Project License](https://img.shields.io/github/license/JeetJawale/Resume-Builder?style=flat-square)](https://github.com/jeetjawale/Resume-Builder/blob/main/LICENSE)
+
 
 ## Features
 
