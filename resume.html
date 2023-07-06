@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="https://img.icons8.com/?size=512&id=z6faRXwXtVdE&format=png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Resume Builder</title>
+  </head>
+  <body>
+    <!-- resume form-->
+    <div class="container" style="font-family:'Times New Roman', Times, serif; font-size:x-large;" id="resume-form">
+      <h1 style="color:black; text-align: center; padding-top: 1%;">
+        <i class='bx bx-edit bx-tada'></i> Resume Builder
+      </h1>
+      <p class="text-center" style="font-family: 'Times New Roman', Times, serif; font-size:x-large;"> By Jeet Jawale</p>
+      <div class="row">
+        <div class="col-md-6">
+          <h3 style="font-family: 'Times New Roman', Times, serif; font-size:xx-large;">Personal Information</h3>
+          <div class="form-group" st>
+            <label for="" style="font-family: 'Times New Roman', Times, serif; font-size:large;">Upload Your Profile Picture</label>
+            <input id="imgField" type="file" class="form-control" class="myimg">
+          </div>
+          <div class="form-group mt-2">
+            <label for="nameField" style="font-family: 'Times New Roman', Times, serif; font-size:large;">Name</label>
+            <input type="text" id="nameField" placeholder="Enter" class="form-control" />
+          </div>
+          <div class="form-group mt-2">
+            <label for="mobileField" style="font-family: 'Times New Roman', Times, serif; font-size:large;">Mobile No.</label>
+            <input type="text" id="mobileField" placeholder="Enter" class="form-control" />
+          </div>
+          <div class="form-group mt-2">
+            <label for="emailField" style="font-family: 'Times New Roman', Times, serif; font-size:large;">Email Address</label>
+            <input type="text" id="emailField" placeholder="Enter" class="form-control" />
+          </div>
+          <div class="form-group mt-2">
+            <label for="addressField" style="font-family: 'Times New Roman', Times, serif; font-size:large;">Address</label>
+            <textarea id="addressField" placeholder="Enter" class="form-control" rows="2"></textarea>
+          </div>
+          <p class="text-secondary my-3" style="font-size: large;">Connect With Me</p>
+          <div class="form-group mt-2">
+            <label for="linkedField" style="font-family: 'Times New Roman', Times, serif; font-size:large;">LinkedIn Profile Link</label>
+            <input type="text" id="linkedField" placeholder="Enter" class="form-control" />
+          </div>
+          <div class="form-group mt-2">
+            <label for="githubField" style="font-family: 'Times New Roman', Times, serif; font-size:large;">Github Profile Link</label>
+            <input type="text" id="githubField" placeholder="Enter" class="form-control" />
+          </div>
+        </div>
+        <div class="col-md-6">
+          <h3 style="font-family: 'Times New Roman', Times, serif; font-size:xx-large;">Scholastic Information</h3>
+          <div class="form-group mt-2">
+            <label for="" style="font-family: 'Times New Roman', Times, serif; font-size:large;">Objective</label>
+            <textarea id="objectiveField" placeholder="Enter" class="form-control" rows="2"></textarea>
+          </div>
+          <div class="form-group mt-3" id="we">
+            <label for="" style="font-family: 'Times New Roman', Times, serif; font-size:large;">Work Experience</label>
+            <textarea placeholder="Enter" class="form-control weField" rows="1"></textarea>
+            <div class="container text-center mt-2" id="weAddButton">
+              <button onclick="addNewWEField()" class="btn btn-primary btn-sm">Add</button>
+            </div>
+          </div>
+          <div class="form-group mt-2" id="s">
+            <label for="" style="font-family: 'Times New Roman', Times, serif; font-size:large;">Skills</label>
+            <textarea placeholder="Enter" class="form-control sField" rows="1"></textarea>
+            <div class="container text-center mt-2" id="sAddButton">
+              <button onclick="addNewsField()" class="btn btn-primary btn-sm">Add</button>
+            </div>
+          </div>
+          <div class="form-group mt-2" id="aq">
+            <label for="" style="font-family: 'Times New Roman', Times, serif; font-size:large;">Qualifications</label>
+            <textarea placeholder="Enter" class="form-control aqField" rows="1"></textarea>
+            <div class="container text-center mt-2" id="aqAddButton">
+              <button onclick="addNewAQField()" class="btn btn-primary btn-sm">Add</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container text-center mt-3">
+        <button onclick="generateresume()" class="btn btn-primary btn-lg" style="margin-bottom: 20px; margin-top: 20px;"> Generate Resume </button>
+      </div>
+    </div>
+    <div class="box-outer" id="resume-template">
+      <div class="resume-box">
+        <div class="box-1">
+          <img src="https://media.istockphoto.com/id/476085198/photo/businessman-silhouette-as-avatar-or-default-profile-picture.jpg?s=612x612&w=0&k=20&c=GVYAgYvyLb082gop8rg0XC_wNsu0qupfSLtO7q9wu38=" class="myimg" id="imgTemplate" />
+          <div class="content">
+            <h1>About me</h1>
+            <p id="nameT"></p>
+            <p id="mobileT"></p>
+            <p id="emailT"></p>
+            <p id="addressT"></p>
+            </hr>
+            <h1>objective</h1>
+            <p id="objectiveT"></p>
+            <br />
+            <h1>Connect with me</h1>
+            <p>
+              <a id="linkedT" href="#1"></a>
+            </p>
+            <p>
+              <a id="githubT" href="#1"></a>
+            </p>
+          </div>
+        </div>
+        <div class="box-2">
+          <div class="intro">
+            <br />
+            <h1 id="nameT2" class="ma"></h1>
+            <div class="clearfix"></div>
+            <hr class="hr1" />
+          </div>
+          <br />
+          <br />
+          <br />
+          <div class="content-2">
+            <h1 class="head">Experience</h1>
+            <hr class="hr2" />
+            <div class="clearfix"></div>
+            <ul id="weT">
+              <li>
+                <strong> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque, ullam perspiciatis dolorem nemo quas odio nisi eveniet voluptas tempore modi iste esse temporibus officiis quia a assumenda ab animi culpa.</strong>
+              </li>
+            </ul>
+            <!--<p class="para-1">UI Designer In Lorem Ipsum </p><p class="para-1">UI Designer </p><p class="para-1">Grapic Designer </p> -->
+          </div>
+          <div class="content-2">
+            <h1 class="head">Education</h1>
+            <hr class="hr2" />
+            <div class="clearfix"></div>
+            <ul id="aqT">
+              <li>
+                <strong> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque, ullam perspiciatis dolorem nemo quas odio nisi eveniet voluptas tempore modi iste esse temporibus officiis quia a assumenda ab animi culpa.</strong>
+              </li>
+            </ul>
+            <!--<p class="para-1">High school of cbse <strong></strong></p><p class="para-21">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p><p class="para-1">Bachelor of Computer Application <strong>(2013 - 2015)</strong></p><p class="para-21">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p> -->
+          </div>
+          <div>
+          <h1 class="head">Skills</h1>
+          <hr class="hr2" />
+          <div class="clearfix"></div>
+          <div class="col-div-4">
+            <p class="p25">
+            <ul id="sT">
+              <li>
+                <strong> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque, ullam perspiciatis dolorem nemo quas odio nisi eveniet voluptas tempore modi iste esse temporibus officiis quia a assumenda ab animi culpa.</strong>
+              </li>
+            </ul>
+            </p>
+          </div>
+        </div>
+        </div>
+      </div>
+      <div class="container text-center mt-2" id="print">
+        <button onclick="printresume()" class="btn btn-primary btn-lg" style="margin-bottom: 20px; margin-top: 20px;"> Print Resume </button>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="script.js "></script>
+  </body>
+</html>

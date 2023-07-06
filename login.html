@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <section class="bothlogins">
+      <div class="logins">
+        <div class="student">
+          <header class="signupstudent">
+            <h1>Login</h1>
+          </header>
+          <main class="signupstudentbody">
+            <form method="post" name="signupform" id="signup" onsubmit="return login()">
+              <p>
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Email" name="Email" required>
+              </p>
+              <p>
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="minimum 8 characters" name="Password" required>
+              </p>
+              <input type="submit" id="submit" value="Login">
+              <p id="forgetpwd">
+                <a href="#">Forgot Password?</a>
+              </p>
+            </form>
+          </main>
+          <footer class="signupstudentfooter">
+            <p>Don't have an account? <a href="signup.html">Signup</a>
+            </p>
+          </footer>
+        </div>
+      </div>
+    </section>
+    <script>
+      function login() {
+        const email = document.getElementById("email").value;
+        const pass = document.getElementById("password").value;
+        const Emails = JSON.parse(localStorage.getItem("Emails"));
+        const Passwords = JSON.parse(localStorage.getItem("Passwords"));
+        let found = false;
+        for (let i = 0; i < Emails.length; i++) {
+          if (Emails[i] === email.toString() && Passwords[i] === pass.toString()) {
+            found = true;
+            break;
+          }
+        }
+        if (found) {
+          window.open("index.html");
+        } else {
+          alert("User Not Found! Please enter valid credentials.");
+        }
+        return false;
+      }
+    </script>
+  </body>
+</html>

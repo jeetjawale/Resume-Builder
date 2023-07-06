@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      body {
+        /* background: url(signupbg2.png) 1%; */
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="bothlogins">
+        <div class="logins">
+          <div class="student">
+            <header class="signupstudent">
+              <h1>Signup</h1>
+            </header>
+            <main class="signupstudentbody">
+              <!-- <form name="ssignupform" action="https://script.google.com/macros/s/AKfycbzuv3ibJTH9Bt6_Yzz6fq4gXRAdV3x5odOK4favHKa8SBYBja3AHTGL8qavt73l5lWm/exec" onsubmit="return scheckEmpty()" method="post" autocomplete="off" id="signup"> -->
+              <form method="post" name="signupform" id="signup" onsubmit="return signup()">
+                <p>
+                  <label for="name">Name</label>
+                  <input type="text" id="name" placeholder="Name" name="Name" required>
+                </p>
+                <p>
+                  <label for="email">Email</label>
+                  <input type="email" id="email" placeholder="Email" name="Email" required>
+                </p>
+                <p>
+                  <label for="password">Set password</label>
+                  <input type="password" id="password" placeholder="minimum 8 characters" name="Password" required>
+                </p>
+                <p id="iagree">
+                  <input type="checkbox" id="agree-to-terms" required>
+                  <label for="agree-to-terms">I agree</label>
+                </p>
+                <input type="submit" id="submit" value="Create Account">
+              </form>
+            </main>
+            <footer class="signupstudentfooter">
+              <p>Already have an account? <a href="login.html">Login</a>
+              </p>
+            </footer>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script>
+      if (localStorage.getItem("Names") == null) {
+        localStorage.setItem("Names", "[]");
+      }
+      if (localStorage.getItem("Emails") == null) {
+        localStorage.setItem("Emails", "[]");
+      }
+      if (localStorage.getItem("Passwords") == null) {
+        localStorage.setItem("Passwords", "[]");
+      }
+
+      function signup() {
+        var name = document.getElementById("name").value
+        var email = document.getElementById("email").value
+        var pass = document.getElementById("password").value
+        var ok = true;
+        if (email === "" || email === null) {
+          alert("Email is empty");
+          ok = false;
+        } else if (pass.length < 8) {
+          alert("Enter a minimum 8-character password");
+          ok = false;
+        }
+        if (ok) {
+          var old_n = JSON.parse(localStorage.getItem("Names"));
+          old_n.push(name);
+          localStorage.setItem("Names", JSON.stringify(old_n));
+          var old_e = JSON.parse(localStorage.getItem("Emails"));
+          old_e.push(email);
+          localStorage.setItem("Emails", JSON.stringify(old_e));
+          var old_pw = JSON.parse(localStorage.getItem("Passwords"));
+          old_pw.push(pass);
+          localStorage.setItem("Passwords", JSON.stringify(old_pw));
+          window.open("login.html");
+        }
+        return false;
+      }
+    </script>
+  </body>
+</html>
