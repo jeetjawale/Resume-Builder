@@ -1,4 +1,4 @@
-<img src=""/>
+<img src="/Resume.png" alt="Resume Builder" width="256px" height="256px" />
 
 # Resume Builder
 A web-based resume builder application that allows users to create professional resumes with ease.
