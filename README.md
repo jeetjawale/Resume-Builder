@@ -3,7 +3,6 @@
 # Resume Builder
 A web-based resume builder application that allows users to create professional resumes with ease.
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen.svg)](https://jeetjawale.github.io/Resume-Builder)
 [![Project License](https://img.shields.io/github/license/JeetJawale/Resume-Builder?style=flat-square)](https://github.com/jeetjawale/Resume-Builder/blob/main/LICENSE)
 
 
