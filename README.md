@@ -22,7 +22,7 @@ A web-based resume builder application that allows users to create professional 
 - Authentication: JavaScript Authentication
 - Database: Local Storage
 - PDF Generation: jsPDF
-- Hosting: GitHub Pages
+
 
 ## Screenshots
 
